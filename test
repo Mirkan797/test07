@@ -1,0 +1,20 @@
+맨 처음에만 하면 됨
+git clone : github -> local
+git init : local -> github
+
+//1번
+git status // 변경된거 있는지 확인
+
+// 2번
+git add . // 담기
+
+// 3번
+git commit -m "커밋 내용"
+
+//4번
+git push // 올리기
+
+// 다시받기
+git pull // 변경된게 있으면 local로 받기
+//파일은 하나씩만 올릴 것
+array
