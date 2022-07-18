@@ -1,46 +1,39 @@
-const data = [
-{
-    name: '나나',
-    colors: ['yellow', 'white'],
-    age: 7,
-    ear: 'unfolded'
-},
-{
-    name: '차이',
-    colors: ['white', 'yellow', 'brown'],
-    age: 3,
-    ear: 'unfolded'
-},
-{
-    name: '모나',
-    colors: ['black', 'white'],
-    age: 2,
-    ear: 'unfolded'
-},
-{
-    name: '레이',
-    colors: ['gray', 'white'],
-    age: 7,
-    ear: 'unfolded'
-},
-{
-    name: '가상의 고양이',
-    colors: ['gray', 'black'],
-    age: 10,
-    ear: 'folded'
-}, 
-null,
-]
+// 버튼을 3개를 만든다.
+const $button1 = document.createElement('button')
+$button1.textContent = 'Button1'
 
-// 털 색이 까만색이 포함되어 있으면서
-// 귀가 접혀있지 않은 고양이들을 뽑기
-function filterCats(cats) {
-    return cats.filter(cat => cat &&
-        cat.colors.includes('black') &&
-        cat.ear === 'unfolded'
-        ).map(cat => cat.name)
-}
- 
-const filteredCatsName = filterCats(data)
-console.log(filteredCatsName)
-document.querySelector('body').innerHTML = filterCatsName
+const $button2 = document.createElement('button')
+$button2.textContent = 'Button2'
+
+const $button3 = document.createElement('button')
+$button3.textContent = 'Button3'
+
+// 만든 버튼을 화면에 그린다.
+const $main = document.querySelector('#app')
+
+$main.appendChild($button1)
+$main.appendChild($button2)
+$main.appendChild($button3)
+
+//버튼을 클릭하면 삭선이 그어진다
+$button1.addEventListener('click', () => {
+    if ($button1.style.textDecoration === 'line-through') {
+        $button1.style.textDecoration = 'none'
+    } else {
+        $button1.style.textDecoration = 'line-through'
+    }
+})
+$button2.addEventListener('click', () => {
+    if ($button2.style.textDecoration === 'line-through') {
+        $button2.style.textDecoration = 'none'
+    } else {
+        $button2.style.textDecoration = 'line-through'
+    }
+})
+$button3.addEventListener('click', () => {
+    if ($button3.style.textDecoration === 'line-through') {
+        $button3.style.textDecoration = 'none'
+    } else {
+        $button3.style.textDecoration = 'line-through'
+    }
+})
