@@ -19,9 +19,7 @@ function TodoList({ $target }) {
 
                 console.log(text)
             })
-            isInit = true
         }    
     }
-
     this.render()
 }
