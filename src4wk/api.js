@@ -10,3 +10,4 @@ export const request = (url) => {
         })
         .catch(e => alert(e.message))
 }
+// //
