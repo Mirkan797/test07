@@ -30,7 +30,7 @@ export default function App({ $app }) {
 
             // 댓글 목록 불러오기
             request (`https://kdt.roto.codes/comments?todo.id=${id}`, (comments) => {
-                rhis.setState({
+                this.setState({
                     ...this.state,
                     comments
                 })
